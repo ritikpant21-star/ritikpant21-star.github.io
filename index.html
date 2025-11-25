@@ -3,73 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ritik Pant - Marketing & Growth Professional specializing in Automation, SEO, Digital Strategy, and Campaign Optimization for startups.">
+    <meta name="keywords" content="Marketing, Growth, SEO, Digital Marketing, Automation, N8N, Campaign Management">
+    <meta name="author" content="Ritik Pant">
     <title>Ritik Pant | Marketing & Growth Professional</title>
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ritik Pant",
+      "jobTitle": "Marketing & Growth Professional",
+      "email": "ritikpant21@gmail.com",
+      "telephone": "+917827448040",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ghaziabad",
+        "addressCountry": "India"
+      },
+      "url": "https://www.linkedin.com/in/ritik-pant-b1204124b",
+      "sameAs": [
+        "https://www.linkedin.com/in/ritik-pant-b1204124b"
+      ]
+    }
+    </script>
+    
     <style>
+        /* ==================== CSS VARIABLES ==================== */
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --charcoal: #36454F;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --accent: #64ffda;
+            --accent-secondary: #3B82F6;
+            --accent-hover: #52e8c4;
+            --text-light: #8892b0;
+            --text-lightest: #ccd6f6;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-accent: 0 0 20px rgba(100, 255, 218, 0.3);
+        }
+        
+        /* ==================== RESET & BASE ==================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --primary-color: #0ea5e9;
-            --primary-dark: #0284c7;
-            --secondary-color: #06b6d4;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --bg-white: #ffffff;
-            --bg-light: #f8fafc;
-            --bg-grey: #f1f5f9;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
-
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--text-dark);
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-lightest);
+            background: var(--primary-dark);
             line-height: 1.6;
-            background-color: var(--bg-white);
+            font-weight: 400;
             overflow-x: hidden;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Scrollbar Styling */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-grey);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 10px;
-        }
-
-        /* Navigation */
-        nav {
+        /* ==================== ANIMATED BACKGROUND ==================== */
+        .animated-bg {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            height: 100%;
+            z-index: -1;
+            background: var(--primary-dark);
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(100, 255, 218, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* ==================== TYPOGRAPHY ==================== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-lightest);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        h4 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* ==================== SCROLL TO TOP BUTTON ==================== */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-accent);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+        }
+        
+        /* ==================== NAVIGATION ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 25, 47, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-sm);
+            box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
             z-index: 1000;
             transition: var(--transition);
         }
-
-        nav.scrolled {
-            box-shadow: var(--shadow-md);
+        
+        .navbar.scrolled {
+            box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.9);
         }
-
+        
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -78,674 +210,1096 @@
             justify-content: space-between;
             align-items: center;
         }
-
-        .logo {
-            font-size: 1.5rem;
+        
+        .nav-logo {
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            transition: var(--transition);
         }
 
-        .nav-links {
+        .nav-logo:hover {
+            color: var(--accent-hover);
+            text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+        }
+        
+        .nav-menu {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
+        
+        .nav-link {
+            color: var(--text-lightest);
             font-weight: 500;
-            transition: var(--transition);
+            font-size: 0.95rem;
             position: relative;
+            padding: 0.5rem 0;
         }
 
-        .nav-links a::after {
+        .nav-link::before {
+            content: '< ';
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .nav-link::after {
+            content: ' />';
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::before,
+        .nav-link:hover::after {
+            opacity: 1;
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: 2px solid var(--accent);
+            border-radius: 4px;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-toggle:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        
+        /* ==================== BUTTONS ==================== */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
             transition: var(--transition);
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-accent);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--text-lightest);
+            border: 2px solid var(--text-lightest);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: var(--secondary-dark);
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* ==================== CONTAINER & SECTION ==================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            color: var(--text-lightest);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
+        .section-title::before {
+            content: '<';
+            color: var(--accent);
+            margin-right: 0.5rem;
+            font-family: 'Courier New', monospace;
         }
 
-        .mobile-toggle {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--text-dark);
-            cursor: pointer;
+        .section-title::after {
+            content: ' />';
+            color: var(--accent);
+            margin-left: 0.5rem;
+            font-family: 'Courier New', monospace;
         }
-
-        /* Hero Section */
+        
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+        
+        /* ==================== HERO SECTION ==================== */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
-            position: relative;
-            overflow: hidden;
             padding-top: 80px;
+            position: relative;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
+        
         .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            animation: fadeInUp 0.8s ease-out 0.4s backwards;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease-out 0.6s backwards;
-        }
-
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* About Section */
-        .about-container {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-
-        .about-image {
-            position: relative;
+        
+        .hero-text h1 {
+            color: var(--text-lightest);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease forwards;
         }
 
-        .about-image img {
-            width: 100%;
-            max-width: 350px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
+        .hero-greeting {
+            color: var(--accent);
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            font-family: 'Courier New', monospace;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
         }
-
-        .about-image img:hover {
-            transform: scale(1.02);
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            border: 3px solid var(--primary-color);
-            border-radius: 20px;
-            z-index: -1;
-        }
-
-        .about-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .about-content p {
+        
+        .hero-title {
             color: var(--text-light);
-            font-size: 1.1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+        
+        .hero-summary {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
         }
-
-        /* Skills Section */
-        #skills {
-            background: var(--bg-light);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .skill-card-header {
+        
+        .hero-buttons {
             display: flex;
-            align-items: center;
             gap: 1rem;
-            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+            opacity: 0;
         }
-
-        .skill-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 12px;
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 0.8s ease 1s forwards;
+            opacity: 0;
+        }
+        
+        .headshot {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .skill-card h3 {
-            font-size: 1.4rem;
-            color: var(--text-dark);
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background: var(--bg-grey);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--text-dark);
+            font-size: 6rem;
+            color: var(--primary-dark);
+            box-shadow: 0 0 40px rgba(100, 255, 218, 0.3);
+            border: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
             transition: var(--transition);
         }
 
-        .skill-tag:hover {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
+        .headshot::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
         }
 
-        /* Experience Section */
-        .experience-timeline {
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .headshot:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(100, 255, 218, 0.5);
+        }
+
+        /* ==================== STATS SECTION ==================== */
+        .stats-section {
+            background: var(--secondary-dark);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-accent);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* ==================== ABOUT SECTION ==================== */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-description {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .about-quote {
+            font-size: 1.75rem;
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 500;
+            margin: 3rem 0;
             position: relative;
-            padding-left: 2rem;
+            padding: 2rem;
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            text-align: center;
         }
 
-        .experience-timeline::before {
+        .about-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+        
+        /* ==================== TIMELINE ==================== */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
             content: '';
             position: absolute;
             left: 0;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), var(--accent-secondary));
         }
-
-        .experience-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
+        
+        .timeline-item {
             position: relative;
-            margin-left: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 3rem;
         }
-
-        .experience-item::before {
-            content: '';
+        
+        .timeline-marker {
             position: absolute;
-            left: -2.75rem;
-            top: 2rem;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-color);
+            left: -8px;
+            top: 0;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: var(--shadow-md);
+            background: var(--accent);
+            border: 3px solid var(--primary-dark);
+            box-shadow: var(--shadow-accent);
+            animation: pulse-marker 2s infinite;
         }
 
-        .experience-item:hover {
-            transform: translateX(10px);
+        @keyframes pulse-marker {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(100, 255, 218, 0);
+            }
+        }
+        
+        .timeline-card {
+            background: var(--secondary-dark);
+            border-radius: 12px;
+            padding: 2rem;
             box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            border: 1px solid rgba(100, 255, 218, 0.1);
         }
-
-        .experience-header {
+        
+        .timeline-card:hover {
+            box-shadow: var(--shadow-accent);
+            transform: translateX(8px);
+            border-color: var(--accent);
+        }
+        
+        .timeline-header {
             margin-bottom: 1rem;
         }
-
-        .experience-header h3 {
+        
+        .timeline-company {
+            color: var(--text-lightest);
             font-size: 1.5rem;
-            color: var(--text-dark);
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
-
-        .experience-meta {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+        
+        .timeline-role {
+            color: var(--accent);
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-duration {
             color: var(--text-light);
             font-size: 0.95rem;
+            font-weight: 400;
+            font-family: 'Courier New', monospace;
         }
-
-        .experience-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .experience-item ul {
+        
+        .timeline-highlights {
             list-style: none;
-            padding: 0;
+            margin-top: 1.5rem;
         }
-
-        .experience-item li {
+        
+        .timeline-highlights li {
             padding-left: 1.5rem;
             margin-bottom: 0.75rem;
             position: relative;
             color: var(--text-light);
         }
-
-        .experience-item li::before {
+        
+        .timeline-highlights li::before {
             content: '▹';
             position: absolute;
             left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        /* ==================== PROJECTS CARDS ==================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--secondary-dark);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            position: relative;
         }
 
-        /* Education Section */
-        #education {
-            background: var(--bg-light);
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            transform: scaleX(0);
+            transition: var(--transition);
         }
 
-        .education-grid {
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-accent);
+            border-color: var(--accent);
+        }
+        
+        .project-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-thumbnail::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-title {
+            color: var(--text-lightest);
+            font-size: 1.375rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-summary {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .project-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-results {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-link {
+            color: var(--accent);
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            gap: 0.75rem;
+        }
+        
+        /* ==================== SKILLS ==================== */
+        .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
-        .education-card {
-            background: white;
+        
+        .skill-category {
+            background: var(--secondary-dark);
             padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(100, 255, 218, 0.1);
             transition: var(--transition);
-            border-left: 4px solid var(--primary-color);
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-accent);
+            transform: translateY(-5px);
+        }
+        
+        .skill-category h3 {
+            color: var(--text-lightest);
+            margin-bottom: 1.5rem;
+            font-size: 1.375rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category h3::before {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            transition: var(--transition);
+        }
+        
+        .skill-tag:hover {
+            background: var(--accent);
+            color: var(--primary-dark);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-accent);
+        }
+
+        /* ==================== PROGRESS BARS ==================== */
+        .skills-progress {
+            margin-top: 3rem;
+        }
+
+        .skill-bar {
+            margin-bottom: 2rem;
+        }
+
+        .skill-bar-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-bar-name {
+            color: var(--text-lightest);
+            font-weight: 500;
+        }
+
+        .skill-bar-percent {
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+        }
+
+        .skill-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+        
+        /* ==================== EDUCATION ==================== */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .education-card {
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--accent);
+            transition: var(--transition);
         }
 
         .education-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-accent);
         }
-
-        .education-card h3 {
-            font-size: 1.3rem;
-            color: var(--text-dark);
+        
+        .education-degree {
+            color: var(--text-lightest);
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
-
-        .education-card h4 {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-weight: 500;
-        }
-
-        .education-card p {
-            color: var(--text-light);
-        }
-
-        /* Achievements Section */
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .achievement-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            color: white;
-            text-align: center;
-            transition: var(--transition);
-            box-shadow: var(--shadow-md);
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .achievement-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .achievement-card h3 {
-            font-size: 1.5rem;
+        
+        .education-institution {
+            color: var(--accent);
+            font-size: 1rem;
             margin-bottom: 0.5rem;
         }
-
-        .achievement-card p {
-            opacity: 0.9;
-        }
-
-        /* Certifications Section */
-        #certifications {
-            background: var(--bg-light);
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .certification-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-        }
-
-        .certification-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .cert-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--bg-grey);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .certification-content h3 {
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .certification-content p {
+        
+        .education-score {
             color: var(--text-light);
             font-size: 0.95rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .certifications-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 2rem auto 0;
+        }
+        
+        .certifications-list li {
+            background: rgba(100, 255, 218, 0.05);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-weight: 500;
+            border-left: 3px solid var(--accent);
+            transition: var(--transition);
         }
 
-        /* Contact Section */
+        .certifications-list li:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateX(5px);
+        }
+        
+        /* ==================== ACHIEVEMENTS ==================== */
+        .achievements-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: none;
+        }
+        
+        .achievement-item {
+            background: var(--secondary-dark);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            color: var(--text-light);
+            font-size: 1.125rem;
+            position: relative;
+            padding-left: 4rem;
+            transition: var(--transition);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        
+        .achievement-item:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-accent);
+            border-color: var(--accent);
+        }
+        
+        .achievement-item::before {
+            content: '🏆';
+            position: absolute;
+            left: 1.5rem;
+            font-size: 1.5rem;
+            filter: grayscale(0);
+            transition: var(--transition);
+        }
+
+        .achievement-item:hover::before {
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        /* ==================== CONTACT ==================== */
         .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            gap: 3rem;
         }
-
+        
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
             gap: 1.5rem;
         }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: var(--transition);
+            padding: 1rem;
+            border-radius: 8px;
+        }
 
+        .contact-item:hover {
+            background: rgba(100, 255, 218, 0.05);
+            transform: translateX(5px);
+        }
+        
         .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             font-size: 1.5rem;
             flex-shrink: 0;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            transition: var(--transition);
         }
 
-        .contact-details h3 {
-            font-size: 1.1rem;
-            color: var(--text-dark);
+        .contact-item:hover .contact-icon {
+            background: var(--accent);
+            transform: rotate(10deg);
+        }
+        
+        .contact-details h4 {
+            color: var(--text-lightest);
+            font-size: 1rem;
             margin-bottom: 0.25rem;
         }
-
-        .contact-details p, .contact-details a {
+        
+        .contact-details p,
+        .contact-details a {
             color: var(--text-light);
-            text-decoration: none;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
         .contact-details a:hover {
-            color: var(--primary-color);
+            color: var(--accent);
         }
-
+        
         .contact-form {
-            background: var(--bg-light);
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-sm);
+            background: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(100, 255, 218, 0.1);
         }
-
+        
         .form-group {
             margin-bottom: 1.5rem;
         }
-
+        
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            color: var(--text-lightest);
             font-weight: 500;
+            margin-bottom: 0.5rem;
         }
-
+        
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
-            border: 2px solid var(--bg-grey);
+            padding: 0.875rem;
+            border: 1px solid rgba(100, 255, 218, 0.3);
             border-radius: 8px;
             font-family: inherit;
             font-size: 1rem;
             transition: var(--transition);
-            background: white;
+            background: rgba(100, 255, 218, 0.05);
+            color: var(--text-lightest);
         }
-
+        
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+            background: rgba(100, 255, 218, 0.1);
         }
-
+        
         .form-group textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 120px;
         }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 2rem 1.5rem;
+        
+        .form-submit {
+            width: 100%;
+        }
+        
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: var(--secondary-dark);
+            color: var(--text-light);
+            padding: 3rem 0 1.5rem;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             text-align: center;
+        }
+        
+        .footer-text {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-link {
+            color: var(--text-lightest);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .footer-copyright {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            font-family: 'Courier New', monospace;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         .social-link {
             width: 50px;
             height: 50px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(100, 255, 218, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+            color: var(--accent);
+            border: 1px solid rgba(100, 255, 218, 0.3);
             transition: var(--transition);
-            text-decoration: none;
         }
 
         .social-link:hover {
-            background: var(--primary-color);
-            transform: translateY(-3px);
+            background: var(--accent);
+            color: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-accent);
         }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
 
-        .footer-text {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--secondary-dark);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+                padding: 2rem 0;
+                gap: 1rem;
+                border-top: 1px solid rgba(100, 255, 218, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .headshot {
+                width: 220px;
+                height: 220px;
+                font-size: 4rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .timeline::before {
+                left: 0;
+            }
+            
+            .timeline-item {
+                padding-left: 2rem;
+            }
+            
+            .timeline-marker {
+                left: -8px;
+            }
 
-        /* Animations */
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ==================== UTILITIES ==================== */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+        
+        .mt-2 {
+            margin-top: 2rem;
+        }
+        
+        /* ==================== ANIMATIONS ==================== */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -756,482 +1310,699 @@
                 transform: translateY(0);
             }
         }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* ==================== TYPING ANIMATION ==================== */
+        .typing-text {
+            overflow: hidden;
+            border-right: 2px solid var(--accent);
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                flex-direction: column;
-                background: white;
-                width: 100%;
-                padding: 2rem;
-                box-shadow: var(--shadow-md);
-                transition: var(--transition);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero h2 {
-                font-size: 1.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-image img {
-                max-width: 250px;
-                margin: 0 auto;
-                display: block;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .skills-grid,
-            .education-grid,
-            .certifications-grid {
-                grid-template-columns: 1fr;
-            }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
         }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent) }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">RP</a>
-            <button class="mobile-toggle" id="mobileToggle">
+            <a href="#hero" class="nav-logo">&lt;RP/&gt;</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Ritik Pant</h1>
-            <h2>Marketing & Growth Professional | Automation | SEO | Digital Strategy</h2>
-            <p>Helping brands grow through data-driven marketing, automation & creative strategy.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-                <a href="#experience" class="btn btn-secondary">
-                    <i class="fas fa-briefcase"></i> View Projects
-                </a>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero visible" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hi, my name is</p>
+                    <h1>Ritik Pant</h1>
+                    <p class="hero-title">Marketing & Growth Professional | Automation | SEO | Digital Strategy</p>
+                    <p class="hero-summary">
+                        Results-driven marketing & growth specialist with hands-on experience in digital marketing, SEO, campaign optimization, Web Development, automation (N8N), and market intelligence for startups.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/mnt/data/New Resume.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i> Hire Me
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Contact
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="headshot">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ==================== STATS SECTION ==================== -->
+    <section class="stats-section visible">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Months of Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="40">%</div>
+                    <div class="stat-label"> % Efficiency Boost</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://raw.githubusercontent.com/ritikpant21-star/ritikpant21-star.github.io/cdf75bfc49b8c6870f86ad9235cd9b12824f3872/Photo.JPG" alt="Ritik Pant">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
             </div>
-            <div class="about-content fade-in">
-                <h3>Results-Driven Marketing Professional</h3>
-                <p>
-                    Results-driven Marketing & Growth professional with hands-on experience in digital marketing, content creation, campaign optimisation, automation, SEO, and market intelligence.
+            <div class="about-content">
+                <p class="about-description">
+                    I'm a passionate marketing and growth professional with a unique blend of creative and analytical skills. My journey in digital marketing has equipped me with expertise in SEO, automation, campaign management, and data-driven strategy. I thrive on solving complex problems with innovative solutions—whether it's building automated workflows with N8N, optimizing Google Ads campaigns, or conducting deep market research. With a strong foundation in business management and continuous learning through certifications, I bring a results-oriented mindset to every project. Beyond marketing, I'm committed to personal growth, reflected in my achievements in competitive academics and bodybuilding.
                 </p>
-                <p>
-                    Skilled in using N8N for workflow automation, scraping competitor insights, analysing metrics, and supporting data-backed decision-making. Experienced in high-paced startup environments and passionate about creative strategy and performance marketing.
-                </p>
-            </div>
-        </div>
-    </section>
+                <div class="about-quote">
+                    Design with empathy. Market with purpose.
+                </div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Skills & Expertise</h2>
-        <p class="section-subtitle">A comprehensive toolkit for modern marketing and growth</p>
-        <div class="skills-grid">
-            <!-- Marketing Skills -->
-            <div class="skill-card fade-in">
-                <div class="skill-card-header">
-                    <div class="skill-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Marketing & Creative</h3>
-                </div>
-                <div class="skill-list">
-                    <span class="skill-tag">Digital Marketing</span>
-                    <span class="skill-tag">Content Creation</span>
-                    <span class="skill-tag">Campaign Management</span>
-                    <span class="skill-tag">Social Media Marketing</span>
-                    <span class="skill-tag">SEO & Website Optimization</span>
-                    <span class="skill-tag">Copywriting</span>
-                    <span class="skill-tag">Creative Strategy</span>
-                </div>
-            </div>
+                <!-- Skills Progress Bars -->
+                <div class="skills-progress">
+                    <div class="skill-bar">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name">Digital Marketing</span>
+                            <span class="skill-bar-percent">90%</span>
+                        </div>
 
-            <!-- Research & Analytics -->
-            <div class="skill-card fade-in">
-                <div class="skill-card-header">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
+                        
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 0%" data-width="90"></div>
+                        </div>
                     </div>
-                    <h3>Research & Analytics</h3>
-                </div>
-                <div class="skill-list">
-                    <span class="skill-tag">Market Intelligence</span>
-                    <span class="skill-tag">ICP Development</span>
-                    <span class="skill-tag">Competitor Analysis</span>
-                    <span class="skill-tag">Data-based Prospecting</span>
-                    <span class="skill-tag">Excel (Dashboards, Pivot)</span>
-                    <span class="skill-tag">Automation</span>
-                </div>
-            </div>
-
-            <!-- Tools -->
-            <div class="skill-card fade-in">
-                <div class="skill-card-header">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
+                    <div class="skill-bar">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name">SEO & Analytics</span>
+                            <span class="skill-bar-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 0%" data-width="85"></div>
+                        </div>
                     </div>
-                    <h3>Tools & Platforms</h3>
-                </div>
-                <div class="skill-list">
-                    <span class="skill-tag">N8N</span>
-                    <span class="skill-tag">LinkedIn Sales Navigator</span>
-                    <span class="skill-tag">Apollo</span>
-                    <span class="skill-tag">Canva</span>
-                    <span class="skill-tag">Google Ads</span>
-                    <span class="skill-tag">Meta Ads</span>
-                    <span class="skill-tag">SEMRUSH</span>
-                    <span class="skill-tag">ScreamingFrog</span>
-                    <span class="skill-tag">MS Office Suite</span>
+                    <div class="skill-bar">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name">Sales Automation</span>
+                            <span class="skill-bar-percent">88%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 0%" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-header">
+                            <span class="skill-bar-name">Content Strategy</span>
+                            <span class="skill-bar-percent">92%</span>
+                        </div>
+                        <div class="skill-bar-bg">
+                            <div class="skill-bar-fill" style="width: 0%" data-width="92"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
     <section id="experience">
-        <h2 class="section-title">Professional Experience</h2>
-        <p class="section-subtitle">Building growth through data-driven strategies and automation</p>
-        <div class="experience-timeline">
-            <div class="experience-item fade-in">
-                <div class="experience-header">
-                    <h3>Sales & Marketing Intern</h3>
-                    <div class="experience-meta">
-                        <span><i class="fas fa-building"></i> RDSdata (RDSolutions)</span>
-                        <span><i class="fas fa-calendar"></i> Jun 2025 – Present</span>
-                    </div>
-                </div>
-                <ul>
-                    <li>Conducted structured market & ad research improving prospect accuracy by 10%</li>
-                    <li>Used LinkedIn Sales Navigator, Apollo & mapping tools for campaign support</li>
-                    <li>Automated lead generation using N8N (reduced manual effort by 40%)</li>
-                    <li>Scraped & analyzed competitor LinkedIn posts with N8N to deliver actionable insights</li>
-                    <li>Assisted leadership with real-time insights improving decision making by 30%</li>
-                    <li>Executed SEO tasks (audits, backlinks, optimization)</li>
-                </ul>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">My professional journey and key contributions</p>
             </div>
-
-            <div class="experience-item fade-in">
-                <div class="experience-header">
-                    <h3>Intern, Men for Gender Inclusion Program</h3>
-                    <div class="experience-meta">
-                        <span><i class="fas fa-building"></i> Azad Foundation</span>
-                        <span><i class="fas fa-calendar"></i> 2023 – 2024</span>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-company">RDSdata (RDSolutions)</h3>
+                            <h4 class="timeline-role">Sales & Marketing Intern</h4>
+                            <p class="timeline-duration">June 2025 – Present</p>
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Conducted comprehensive market & advertising research, increasing prospecting accuracy by 10%</li>
+                            <li>Automated lead generation workflows using N8N, reducing manual effort by 40%</li>
+                            <li>Executed LinkedIn data scraping and content analysis to derive actionable insights for leadership</li>
+                            <li>Performed SEO audits, backlink analysis, and content optimization to improve organic visibility</li>
+                            <li>Used N8N to scrape competitors’ LinkedIn posts, analyze engagement trends, content themes, and posting frequency, and
+delivered actionable insights to senior leadership for improving brand communication strategies.
+</li>
+                            <li>Collaborated with leadership to refine go-to-market strategy using real-time insights, improving decision-making efficiency by
+30% .</li>
+                            <li>Executed SEO initiatives including technical audits, backlink acquisition, and content optimization, improving online visibility
+and engagement.
+</li>
+                            <li>Contributed to Long-form content ideas for brand visibility and customer engagement.
+</li>
+                            <li>Assisted in evaluating campaign outcomes using Excel dashboards, analyzing trends and recommending optimization actions.</li>
+                            
+                        </ul>
                     </div>
                 </div>
-                <ul>
-                    <li>Led structured community outreach programs</li>
-                    <li>Conducted research-based campaigns & public engagement activities</li>
-                    <li>Supported stakeholder communication and awareness initiatives</li>
-                </ul>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3 class="timeline-company">Azad Foundation</h3>
+                            <h4 class="timeline-role">Intern, Men for Gender Inclusion Program</h4>
+                            <p class="timeline-duration">June 2023 – January 2024</p>
+                        </div>
+                        <ul class="timeline-highlights">
+                            <li>Led community outreach initiatives to promote gender inclusion awareness</li>
+                            <li>Managed stakeholder relationships and coordinated program activities</li>
+                            <li>Executed awareness campaigns reaching diverse community segments</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">A showcase of my work in marketing, automation, and digital strategy</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-summary">
+                            Designed and developed a modern, responsive portfolio website from scratch using HTML, CSS, and JavaScript.
+                        </p>
+                        <p class="project-role"><i class="fas fa-user-tie"></i> Role: Prompt Developer & Designer</p>
+                        <p class="project-results"><i class="fas fa-chart-line"></i> Results: Clean, professional web presence with optimized performance</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Google Ads Campaign</h3>
+                        <p class="project-summary">
+                            Planned and executed a targeted Google Ads campaign with ₹20,000 budget, focusing on US C-suite executives.
+                        </p>
+                        <p class="project-role"><i class="fas fa-user-tie"></i> Role: Sales & Marketing Intern</p>
+                        <p class="project-results"><i class="fas fa-chart-line"></i> Results: Optimized CTR and qualified lead generation</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Marketing Automation with N8N</h3>
+                        <p class="project-summary">
+                            Built automated workflows for lead generation, LinkedIn scraping, and API integrations to streamline marketing operations.
+                        </p>
+                        <p class="project-role"><i class="fas fa-user-tie"></i> Role: Sales & Marketing Intern  </p>
+                        <p class="project-results"><i class="fas fa-chart-line"></i> Results: 40% reduction in manual effort, improved data accuracy</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Addiction & Fantasy Sports Research</h3>
+                        <p class="project-summary">
+                            Conducted comprehensive user research including persona development and empathy mapping to understand behavioral patterns.
+                        </p>
+                        <p class="project-role"><i class="fas fa-user-tie"></i> Role: Sales & Marketing Intern</p>
+                        <p class="project-results"><i class="fas fa-chart-line"></i> Results: Actionable insights for product strategy and user engagement</p>
+                       
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Website Responsiveness Optimization</h3>
+                        <p class="project-summary">
+                            Performed comprehensive website audit and implemented fixes to improve mobile responsiveness and user experience.
+                        </p>
+                        <p class="project-role"><i class="fas fa-user-tie"></i> Role: Prompt Developer & Designer</p>
+                        <p class="project-results"><i class="fas fa-chart-line"></i> Results: Enhanced mobile UX, improved page speed scores</p>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">A comprehensive toolkit for modern marketing and growth</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-paint-brush"></i> Marketing & Creative</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Digital Marketing</span>
+                        <span class="skill-tag">Content Creation</span>
+                        <span class="skill-tag">HTML/CSS/JS</span>
+                        <span class="skill-tag">Campaign Management</span>
+                        <span class="skill-tag">Social Media</span>
+                        <span class="skill-tag">SEO</span>
+                        <span class="skill-tag">Copywriting</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Analytical & Research</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Market Intelligence</span>
+                        <span class="skill-tag">Competitor Analysis</span>
+                        <span class="skill-tag">ICP Development</span>
+                        <span class="skill-tag">Data Prospecting</span>
+                        <span class="skill-tag">Excel Analytics</span>
+                        <span class="skill-tag">Automation</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LinkedIn Sales Navigator</span>
+                        <span class="skill-tag">Apollo</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">MS Office Suite</span>
+                        <span class="skill-tag">Google Ads</span>
+                        <span class="skill-tag">Meta Ads</span>
+                        <span class="skill-tag">SEMrush</span>
+                        <span class="skill-tag">Screaming Frog</span>
+                        <span class="skill-tag">VSCode</span>
+                        <span class="skill-tag">N8N</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
     <section id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="education-grid">
-            <div class="education-card fade-in">
-                <h3>Bachelor of Business Management</h3>
-                <h4>Dr. B. R. Ambedkar University Delhi</h4>
-                <p><i class="fas fa-award"></i> GPA: 7.5/10</p>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-subtitle">Academic background and professional development</p>
             </div>
-
-            <div class="education-card fade-in">
-                <h3>Higher Secondary Education</h3>
-                <h4>Arwachin Bharti Bhawan Sr. Sec. School</h4>
-                <p><i class="fas fa-award"></i> 80.83%</p>
+            
+            <h3 class="text-center mb-2">Education</h3>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h4 class="education-degree"><i class="fas fa-graduation-cap"></i> Bachelor of Business Management</h4>
+                    <p class="education-institution">Dr. B. R. Ambedkar University, Delhi</p>
+                    <p class="education-score">GPA: 7.5/10</p>
+                </div>
+                
+                <div class="education-card">
+                    <h4 class="education-degree"><i class="fas fa-school"></i> Higher Secondary Education</h4>
+                    <p class="education-institution">Arwachin Bharti Bhawan Sr. Sec. School</p>
+                    <p class="education-score">Score: 80.83%</p>
+                </div>
             </div>
+            
+            <h3 class="text-center mt-2 mb-2">Certifications</h3>
+            <ul class="certifications-list">
+                <li><i class="fas fa-certificate"></i> Google Digital Marketing & E-Commerce Professional Certificate</li>
+                <li><i class="fas fa-certificate"></i> Multiple Coursera Specialization Courses</li>
+                <li><i class="fas fa-certificate"></i> LinkedIn Learning: Grow Your Revenue with Performance Marketing</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
     <section id="achievements">
-        <h2 class="section-title">Achievements</h2>
-        <div class="achievements-grid">
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">🏆</div>
-                <h3>NMAT Score</h3>
-                <p>Scored 240 in NMAT</p>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Milestones and recognition</p>
             </div>
-
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">📊</div>
-                <h3>98+ Percentile</h3>
-                <p>Achieved 98+ Percentile</p>
-            </div>
-
-            <div class="achievement-card fade-in">
-                <div class="achievement-icon">🎓</div>
-                <h3>NMIMS Mumbai</h3>
-                <p>Received Interview Call</p>
-            </div>
+            <ul class="achievements-list">
+                <li class="achievement-item">
+                    Scored 240 on NMAT, secured NMIMS interview, achieved 98+ percentile in management entrance exams
+                </li>
+                <li class="achievement-item">
+                    1st Place Winner — Waste Management Innovation Competition
+                </li>
+                <li class="achievement-item">
+                    Top 5 Finishes in Multiple Natural Bodybuilding Competitions
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certifications-grid">
-            <div class="certification-card fade-in">
-                <div class="cert-icon">
-                    <i class="fab fa-google"></i>
-                </div>
-                <div class="certification-content">
-                    <h3>Google Digital Marketing & E-commerce Certificate</h3>
-                    <p>Coursera</p>
-                </div>
-            </div>
-
-            <div class="certification-card fade-in">
-                <div class="cert-icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="certification-content">
-                    <h3>Grow Your Revenue with Performance Marketing</h3>
-                    <p>LinkedIn Learning</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+    <!-- ==================== CONTACT SECTION ==================== -->
     <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Let's discuss how we can work together</p>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <a href="mailto:ritikpant21@gmail.com">ritikpant21@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Phone</h3>
-                        <a href="tel:7827448040">7827448040</a>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com/in/ritik-pant-b1204124b" target="_blank">linkedin.com/in/ritik-pant-b1204124b</a>
-                    </div>
-                </div>
-
-                <div class="contact-item fade-in">
-                    <div class="contact-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Website</h3>
-                        <a href="https://rdsolutions.io" target="_blank">rdsolutions.io</a>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's discuss how I can help grow your business</p>
             </div>
-
-            <form class="contact-form fade-in">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Ghaziabad, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:ritikpant21@gmail.com">ritikpant21@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+917827448040">+91 7827448040</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/ritik-pant-b1204124b" target="_blank" rel="noopener">Connect with me</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/mnt/data/New Resume.pdf" download class="btn btn-primary" style="margin-top: 1rem;">
+                        <i class="fas fa-download"></i> Download My CV
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/ritik-pant-b1204124b" target="_blank" class="social-link">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:ritikpant21@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://rdsolutions.io" target="_blank" class="social-link">
-                <i class="fas fa-globe"></i>
-            </a>
-            <a href="https://github.com" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ritik-pant-b1204124b" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:ritikpant21@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+917827448040" class="social-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://github.com/ritikpant21-star" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#projects" class="footer-link">Projects</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <p class="footer-text">
+                Ritik Pant &mdash; Marketing & Growth Professional
+            </p>
+            <p class="footer-copyright">
+                &copy; 2024 Ritik Pant. All rights reserved.
+            </p>
         </div>
-        <p class="footer-text">© 2025 Ritik Pant. All rights reserved.</p>
     </footer>
 
+    <!-- ==================== JAVASCRIPT ==================== -->
     <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        // ==================== MOBILE NAVIGATION TOGGLE ====================
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
-
+        
         // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
-
-        // Navbar scroll effect
+        
+        // ==================== NAVBAR SCROLL EFFECT ====================
         const navbar = document.getElementById('navbar');
+        const scrollTop = document.getElementById('scrollTop');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
+
+            // Show/hide scroll to top button
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
         });
 
-        // Intersection Observer for fade-in animations
+        // Scroll to top functionality
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // ==================== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS ====================
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: '0px 0px -100px 0px'
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    
+                    // Animate stats counters
+                    if (entry.target.querySelector('.stat-number')) {
+                        animateCounters(entry.target);
+                    }
+
+                    // Animate skill bars
+                    if (entry.target.querySelector('.skill-bar-fill')) {
+                        animateSkillBars(entry.target);
+                    }
                 }
             });
         }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        
+        // Observe all sections except hero
+        document.querySelectorAll('section:not(.hero)').forEach(section => {
+            observer.observe(section);
         });
 
-        // Form submission (you can customize this with actual backend integration)
-        document.querySelector('.contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            e.target.reset();
-        });
+        // ==================== COUNTER ANIMATION ====================
+        function animateCounters(section) {
+            const counters = section.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
 
-        // Smooth scroll for anchor links
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+        }
+
+        // ==================== SKILL BAR ANIMATION ====================
+        function animateSkillBars(section) {
+            const skillBars = section.querySelectorAll('.skill-bar-fill');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 200);
+            });
+        }
+        
+        // ==================== SMOOTH SCROLL ====================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
+        
+        // ==================== CONTACT FORM HANDLING ====================
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', formData);
+            
+            // Show success message
+            alert('Thank you for your message! I will get back to you soon.');
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // ==================== DYNAMIC YEAR IN FOOTER ====================
+        const copyrightYear = document.querySelector('.footer-copyright');
+        const currentYear = new Date().getFullYear();
+        copyrightYear.innerHTML = `&copy; ${currentYear} Ritik Pant. All rights reserved.`;
+        
+        // ==================== ANALYTICS TRACKING (Placeholder) ====================
+        function trackEvent(category, action, label) {
+            console.log('Event tracked:', category, action, label);
+        }
+        
+        // Track button clicks
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                trackEvent('Button', 'Click', this.textContent);
+            });
+        });
+        
+        // Track project card clicks
+        document.querySelectorAll('.project-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                trackEvent('Project', 'View', this.closest('.project-card').querySelector('.project-title').textContent);
+            });
+        });
+
+        // ==================== PARTICLE EFFECT (Optional Enhancement) ====================
+        // You can add particles.js or similar library for enhanced background effects
     </script>
 </body>
 </html>
-
-
-
-
