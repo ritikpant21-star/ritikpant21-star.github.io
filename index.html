@@ -7,7 +7,16 @@
     <meta name="keywords" content="Marketing, Growth, SEO, Digital Marketing, Automation, N8N, Campaign Management">
     <meta name="author" content="Ritik Pant">
     <title>Ritik Pant | Marketing & Growth Professional</title>
-    
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "2rjBZDFVbsTEB3aBi",
+      });
+   })();
+</script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -1793,13 +1802,16 @@ and engagement.
                         <label for="email"><i class="fas fa-envelope"></i> Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
+                    <div class="form-group">
+    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+    <input type="text" id="subject" name="subject" required>
+</div> 
                     <div class="form-group">
                         <label for="message"><i class="fas fa-comment"></i> Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary form-submit">
+                    <button type="submit" onclick="sendmail()" class="btn btn-primary form-submit">
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
@@ -1962,26 +1974,29 @@ and engagement.
         });
         
         // ==================== CONTACT FORM HANDLING ====================
-        const contactForm = document.getElementById('contactForm');
         
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your message! I will get back to you soon.');
-            
-            // Reset form
-            contactForm.reset();
+         const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent page refresh
+
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send("service_zkbp0si", "template_6n5lauf", parms)
+        .then(function() {
+            alert("Email sent successfully!");
+            contactForm.reset(); // clear the form
+        })
+        .catch(function(error) {
+            console.error("EmailJS Error:", error);
+            alert("Something went wrong. Please try again.");
         });
+});
         
         // ==================== DYNAMIC YEAR IN FOOTER ====================
         const copyrightYear = document.querySelector('.footer-copyright');
